@@ -1,11 +1,11 @@
 """ Pruebas Persistencia"""
-import persistencia
+import grabar_datos
 
-def test_guardar_pedido():
+def test_grabar_datos():
     """ Prueba general"""
     with open("pedidos.txt","w",encoding="utf-8")as file:
-        persistencia.guardar_pedido("Pedro","Gil de Diego")
-        persistencia.guardar_pedido("Michael", "Jordan")
+        grabar_datos.grabar_datos("Pedro","Gil de Diego")
+        grabar_datos.grabar_datos("Michael", "Jordan")
         firstline = file.readline()
         secondline = file.readline()
         file.close()
