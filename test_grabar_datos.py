@@ -3,7 +3,7 @@ import grabar_datos
 
 def test_grabar_datos():
     """ Prueba general"""
-    with open("pedidos.txt","w",encoding="utf-8")as file:
+    with open("pedidos.txt","w+",encoding="utf-8")as file:
         grabar_datos.grabar_datos("Pedro","Gil de Diego")
         grabar_datos.grabar_datos("Michael","Jordan")
         firstline = file.readline()
