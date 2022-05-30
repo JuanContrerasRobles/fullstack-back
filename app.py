@@ -22,7 +22,7 @@ def checksize():
         mensaje1 = "Disponible"
         mensaje2 = "No Disponible"
         mensajes = mensaje1, mensaje2
-        if request.form.get("S") == False:
+        if request.form.get("S"):
             print(mensaje1)
         else:
             print(mensaje2)
