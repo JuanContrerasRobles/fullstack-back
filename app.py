@@ -1,5 +1,5 @@
 """ Se importan funciones y datos desde la libreria"""
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, Response
 from grabar_datos import grabar_datos
 
 app = Flask(__name__)
