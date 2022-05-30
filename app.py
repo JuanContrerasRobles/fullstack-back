@@ -23,9 +23,9 @@ def checksize():
         mensaje2 = "No Disponible"
         mensajes = mensaje1, mensaje2
         if request.form.get("S"):
-            print(mensaje1)
-        else:
             print(mensaje2)
+        else:
+            print(mensaje1)
     return Response(mensajes, 200,{'Access-Control-Allow-Origin': '*'})
 
 #Este es otro tipo de codigo pero siempre me retorna disponible ⇩
