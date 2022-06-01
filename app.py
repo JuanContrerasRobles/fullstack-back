@@ -19,25 +19,9 @@ def datos():
 def checksize():
     """Comprueba disponibilidad de un tamaño de pizza"""
     if request.method == "POST":
-        mensaje1 = "Disponible"
-        mensaje2 = "No Disponible"
-        mensajes = mensaje1, mensaje2
-        if request.form.get("S"):
-            print(mensaje2)
+        tamaño = request.form.get("tamaño")
+        if tamaño == "S":
+            mensaje = "No Disponible"
         else:
-            print(mensaje1)
-    return Response(mensajes, 200,{'Access-Control-Allow-Origin': '*'})
-
-#Este es otro tipo de codigo pero siempre me retorna disponible ⇩
-
-"""     
-def checksize():
-    #Comprueba disponibilidad de un tamaño de pizza
-    if request.method == "POST": 
-    mensajes = {"Estado1":"Disponible","Estado2":"No disponible"}
-    for valor in mensajes.values():
-        if request.form.get != "S":
-            print(valor)
-            return valor
-    return Response(valor, 200,{'Access-Control-Allow-Origin': '*'})
-"""
+            mensaje = "Disponible"
+    return Response(mensaje, 200,{'Access-Control-Allow-Origin': '*'})
