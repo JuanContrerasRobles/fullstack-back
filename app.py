@@ -16,6 +16,8 @@ def datos():
         print(usuario)
     return redirect ("http://localhost/solicita_pedido.html", code=302)
 
+@app.route("/checksize", methods=['POST'])
+
 def checksize():
     """Comprueba disponibilidad de un tamaño de pizza"""
     if request.method == "POST":
